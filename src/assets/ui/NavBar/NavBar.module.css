@@ -1,0 +1,13 @@
+
+.btn{
+    @apply bg-gray-900 p-5 text-rose-100 rounded-md transition
+}
+.btn:hover{
+    @apply bg-gray-800
+}
+.active{
+    @apply bg-red-100 p-5 text-slate-800
+}
+.active:hover{
+    @apply bg-red-100 p-5 text-slate-800 pointer-events-none
+}
