@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import store from './store/store'
 import { actions } from './store/User.slice'
-// import store from "./store/store"
 
 
 function App() {
@@ -12,7 +11,7 @@ function App() {
  
   const {data, isLoading, error, isError} = 
   useGetUserbyNameQuery(value)
-
+console.log(localStorage)
   const userData = useSelector(state => state.slice) 
   const dispatch = useDispatch()
 
