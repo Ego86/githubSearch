@@ -8,7 +8,7 @@ const UserSlice = createSlice({
         UserData: (state, {payload}) => {
             const isExit = state.some(item => item.id === payload.id)
             if(isExit){
-            if(localStorage.length === 10){
+            if(localStorage.length >= 10){
                 localStorage.removeItem(localStorage[localStorage.length].id)
             }
                 return state.filter(item => item.id !== payload.id)
