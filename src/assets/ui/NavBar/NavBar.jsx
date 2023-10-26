@@ -13,11 +13,11 @@ return (
         className={`${styles.btn} ${path === "/" ?styles.active: ""}`}>
             Home
         </Link>
-        <Link 
-        to="/search"
+        <a 
+        href="/search"
         className={`${styles.btn} ${path === "/search" ?styles.active: ""}`}>
             Search
-        </Link>
+        </a>
         <Link 
         to="user"
         className={`${styles.btn} ${path === "/user" ?styles.active: "" }`}>
