@@ -49,7 +49,7 @@ return (
             </h1> 
             :isLoading?
             <h1>loading</h1> 
-            :error.status === 403? <h1 
+            :error?.status === 403? <h1 
             className="flex justify-center text-center">
               search limit is over, that's enough for today
               </h1>
