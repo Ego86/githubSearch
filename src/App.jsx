@@ -47,20 +47,25 @@ return (
           <h1 className='text-3xl text-red-600'>
             not found user
             </h1> 
-            :isLoading?<h1>loading</h1>
+            :isLoading?
+            <h1>loading</h1> 
+            :error.status === 403? <h1 
+            className="flex justify-center text-center">
+              search limit is over, that's enough for today
+              </h1>
             : 
           [data]?.map((item)=>{
           return(
-          <div key={item.id} className='flex justify-center items-center flex-col'>
+          <div key={item?.id} className='flex justify-center items-center flex-col'>
             <img 
-            src={item.avatar_url}
+            src={item?.avatar_url}
              alt="avatar"
              className='w-[20%] rounded-full'/>
             <h1>
-              {item.name}
+              {item?.name}
               </h1>
-            <Link to={item.blog}>
-              {item.blog}
+            <Link to={item?.blog}>
+              {item?.blog}
               </Link>
           </div>
           )

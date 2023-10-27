@@ -11,12 +11,14 @@ return (
         {
             userData?.map(item => {
     return ( 
-    <div key={item.id} className='flex'>
-    <img src={item.avatar_url} width={"33%"} className='shadow-teal-950'></img>
-        <div className='text-gray-700'>
-        <h1>userName: {item.name}</h1>
-        <h1>followers: {item.followers}</h1>
+    <div key={item.id} className='md:flex block'>
+    <img src={item.avatar_url} width={"33%"} className='shadow-teal-950 md:mb-3'></img>
+        <div className='text-gray-700 p-3  md:block flex justify-center items-center flex-col'>
+        <h1>userName: {item.name? item.name: "empty"}</h1>
+        <h1>followers: {item.followers? item.followers : "empty"}</h1>
         <h1>bio: {item.bio}</h1>
+        <h1>location: {item.location? item.location : "empty"}</h1>
+        <h1>repository: {item.public_repos}</h1>
         <Link to={item.blog? item.blog : "/user"}>blog: {item.blog? item.blog: "empty"}</Link>
         </div>
         </div>

@@ -15,7 +15,8 @@ const UserSlice = createSlice({
                 return state.filter(item => item.id !== payload.id)
             }
             localStorage.setItem(payload.id, JSON.stringify(payload))
-            return state.length === 0 ?state.concat(payload): state.pop()
+
+            return state?.slice(1).concat(payload)
         },
     },
 })
